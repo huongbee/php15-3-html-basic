@@ -1,0 +1,46 @@
+body{
+	margin:0px;
+	padding: 0px;
+	background-image: url('../image/hinh1.jpg')
+}
+.header{
+	width: 800px;
+	background-color: #42f486;
+	height: 100px;
+	margin:auto;
+}
+.content{
+	height: 600px;
+	margin: auto;
+	width: 800px;
+}
+.left{
+	height: 300px;
+	width: 300px;
+	background-color: #f756f7;
+	float: left;
+}
+.right{
+	height: 300px;
+	width: 500px;
+	background-color: #ede61a;
+	float: left;
+}
+.footer{
+	width: 800px;
+	background-color: #161ae5;
+	height: 100px;
+	margin:auto;
+}
+.left-2{
+	height: 300px;
+	width: 500px;
+	background-color:red;
+	float: left;
+}
+.right-2{
+	height: 300px;
+	width: 300px;
+	background-color: #84d4f4;
+	float: left;
+}
