@@ -1,0 +1,72 @@
+.hanquoc img{
+  position: absolute;
+  top:0px;
+  left:0px
+}
+.thailan img{
+  position: absolute;
+  top:100px;
+  left:100px;
+}
+.vn{
+  position: absolute;
+  top: 200px;
+  left:200px;
+}
+.anh{
+  position: absolute;
+  top: 300px;
+  left:300px;
+}
+
+#menucha li{
+  float: left;
+  width: 100px;
+  padding: 10px;
+  list-style-type:none;
+  display: inline-block;
+  position: relative;
+  background-color: blue;
+}
+#menucon{
+  display: none;
+  position: absolute;
+  z-index: 100;
+  margin-top: 10px;
+  margin-left: -50px;
+    list-style-type:circle;
+}
+#menucon li{
+  background-color: red;
+}
+#menucha li:hover #menucon
+{
+	display:block;
+}
+
+#cha li{
+  background-color: blue;
+  float: left;
+  padding: 10px 20px;
+  position: relative;
+  list-style-type: none;
+  border-left: 1px solid #fff;
+  color: #fff;
+  font-weight: bold;
+}
+#con{
+  display: none;
+  z-index: 100;
+  position: absolute;
+  margin-top:10px;
+  list-style-type: circle;
+}
+#cha li:hover #con{
+  display: block;
+}
+#con li{
+  margin-left: -50px;
+  width: 100px;
+  background-color: red;
+  list-style-type: circle;
+}

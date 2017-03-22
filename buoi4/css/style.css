@@ -1,0 +1,79 @@
+body{
+	top: 0px;
+	margin:0px;
+	padding:0px;
+}
+ul.content{
+	list-style-type: circle;
+}
+.content li{
+	display: inline;
+	padding:10px 15px;
+	border-left: 1px solid #dee0e2;
+	background-color: blue;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+}
+.content{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+img{
+	border: 2px solid #000
+}
+.anh{
+	position: absolute;
+	top: 0px;
+	left: 0px
+}
+.vn{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	z-index: 50
+}
+.thailan{
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	z-index: 10
+}
+.hanquoc{
+	position: absolute;
+	top: 150px;
+	left: 150px;
+
+}
+
+
+
+.menucha li{
+	background-color: blue;
+	color: #fff;
+	font-weight: bold;
+	display: inline;
+	position: relative;
+	padding:10px 15px;
+	border-left: 1px solid #fff;
+	list-style-type: none;
+	float: left;
+}
+.menucon{
+	display: none;
+	position: absolute;
+	top: 10px;
+	margin-left: -50px;
+	margin-top:20px;
+
+}
+.menucon li{
+	background-color: red;
+	width: 100px;
+	z-index: 10;
+	border-bottom: 1px solid #fff
+}	
+.menucha li:hover .menucon{
+	display: block;
+}
