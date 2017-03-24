@@ -1,0 +1,119 @@
+body, html{
+	margin:0px;
+	padding: 0px;
+	top: 0px;
+	left: 0px;
+	background-color: #f0f0f0
+}  
+.content{
+	height: auto;
+	background-color: #fff;
+	width: 1200px;
+	margin: 20px auto;
+	display: block;
+}
+.sanpham{
+	float: left;
+	width: 33,33%;
+	height: 280px;
+	margin: 5px;
+	background-color: #fff;
+}
+.hinhsp, .thongtin{
+	float: left;
+	padding: 10px
+}
+.hinhsp{
+	width: 150px;
+	margin:auto;
+}
+.thongtin{
+	width: 200px;
+	margin:auto;
+}
+.hinhsp img{
+	width: 150px;
+	height: 180px;
+}
+.thongtin p{
+	line-height: 12px;
+}
+.thongtin h2{
+	line-height: 12px;
+}
+p.km{
+	color: red;
+	font-family: arial, verdana, sans-serif;
+}
+.ten{
+	font-weight: bold;
+	font-size: 20px;
+	padding-left:20px;
+	line-height: 28px;
+	color: #333
+}
+.gia{
+	font-weight: bold;
+	font-size: 18px;
+	padding-left:20px;
+	margin-top: 5px;
+	color: red
+}
+@media (max-width: 1200px) {
+	.hinhsp{
+		width: 120px;
+		margin:auto;
+	}
+	.thongtin{
+		width: 200px;
+		margin:auto;
+	}
+	.hinhsp img{
+		width: 100px;
+		height: 130px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.hinhsp{
+		width: 120px;
+		margin:auto;
+	}
+	.thongtin{
+		width: 150px;
+		margin:auto;
+	}
+	.hinhsp img{
+		width: 80px;
+		height: 100px;
+	}
+	.sanpham{
+		height: 300px;
+	}
+}
+
+@media (max-width: 800px) {
+	.hinhsp{
+		width: 100px;
+		margin:auto;
+	}
+	.hinhsp img{
+		width: 80px;
+		height: 100px;
+	}
+
+}
+@media (max-width: 700px) {
+	.hinhsp{
+		width: 100px;
+		margin:auto;
+	}
+	.hinhsp img{
+		width: 80px;
+		height: 100px;
+	}
+	.thongtin{
+		display: none;
+	}
+
+}
