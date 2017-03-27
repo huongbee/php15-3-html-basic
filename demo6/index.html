@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>JS cơ bản</title>
+	<link rel="stylesheet" href="">
+</head>
+
+<body>
+
+<script language="javascript">
+	document.write('<p>Hello word!</p>');
+	document.write('<h2>Hello word!</h2>');
+</script>
+	Số a: <input type="text" id="so_a" placeholder="Nhập số thứ nhất" onblur="kiemtra()">
+	<br><br>
+	Số b: <input type="text" id="so_b" placeholder="Nhập số thứ hai">
+	<br><br>
+	Số c: <input type="text" id="so_c" placeholder="Nhập số thứ hai">
+	<br><br>
+	Tổng: <input type="text" id="tong" readonly="true">
+	Max: <input type="text" id="max" readonly="true">
+	<br><br>
+	<button type="button" onclick="tinh_tong()">Tính tổng</button>
+	<button type="button" onclick="tim_max()">Max</button>
+	<script language="javascript">
+		function kiemtra(){
+			var soa = document.getElementById('so_a');
+			if(soa.value == ''){
+				var choose = alert('ko rỗng');
+				return false;
+			}
+			if(isNaN(soa.value)){
+				var choose = alert('nhập số');
+				return false;
+			}
+		}
+		function tinh_tong(){
+			var soa = document.getElementById('so_a');
+			var sob = document.getElementById('so_b');
+			var tong = document.getElementById('tong');
+			if(soa.value == ''){
+				alert('ko rỗng');
+				soa.focus();
+				return false;
+			}
+			if(sob.value == ''){
+				alert('ko rỗng');
+				sob.focus();
+				return false;
+			}
+			if(isNaN(soa.value)){
+				alert('nhập số');
+				soa.focus();
+				return false;
+			}
+			if(isNaN(sob.value)){
+				alert('nhập số');
+				sob.focus();
+				return false;
+			}
+			tong.value =  parseInt(soa.value)+parseInt(sob.value);
+		}
+		function tim_max(){
+			var soa = document.getElementById('so_a').value;
+			var sob = document.getElementById('so_b').value;
+			var soc= document.getElementById('so_c').value;
+			var result = document.getElementById('max');
+			max = soa>sob?parseInt(soa):parseInt(sob);
+			max = max>soc?parseInt(max):parseInt(soc)
+			result.value = max;
+		}
+		
+	</script>
+</body>
+</html>
