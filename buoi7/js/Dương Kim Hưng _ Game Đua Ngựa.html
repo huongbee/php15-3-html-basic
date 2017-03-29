@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://hungphp.com/duangua/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Dương Kim Hưng | Game Đua Ngựa</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="./Dương Kim Hưng _ Game Đua Ngựa_files/jquery-3.1.1.min.js.download"></script>
+	
+  <link href="http://hungphp.com/duangua/icon-soi.jpg" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+<style>
+*
+{
+	margin:0;
+	padding: 0;
+}
+html { 
+  background: url(hinhnen.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+
+
+<div style="background-image: url(duongdua.jpeg),url(dich.jpg);height: 237px;
+			background-position: right bottom, left top;
+			background-repeat: repeat-x,repeat-y;">
+	<div class="clear" style="height: 39px"></div>
+<div>
+	<img id="nguadua1" src="./Dương Kim Hưng _ Game Đua Ngựa_files/nguadua_khongnen.gif" style="position: relative; height: 58px; top: 0px; left: 1084.51px;">	
+</div>
+<div>
+	<img id="nguadua2" src="./Dương Kim Hưng _ Game Đua Ngựa_files/nguadua_khongnen.gif" style="position: relative; height: 58px; top: 0px; left: 1083.48px;">	
+</div>
+
+</div>
+
+<button id="batdau" class="button" style="display: none; margin: 1em auto auto;">Bắt đầu</button>
+<button id="choilai" class="button" style="display: block; margin: 1em auto auto;">Chơi lại</button>
+
+
+
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		var manhinh = $( window ).width();
+		var interval1 = interval2 = null;
+		function Stop(interval)
+		{
+			clearInterval(interval);
+		}
+		function Start1() {
+			$("#nguadua1").attr("src","nguadua_khongnen.gif");
+    		interval1 = setInterval(function(){ 
+
+    			var x = Math.floor((Math.random() * 50) + 1);
+				var left = $("#nguadua1").css("left");
+				var khoangcach = parseInt(left) + x;
+				if(khoangcach>=manhinh-100)
+				 {
+				 	Stop(interval1);
+				 	$("#nguadua1").attr("src","nguadua_khongnen.png");
+				 	alert("Ngựa 1 Đến");
+
+				 }
+				 $("#nguadua1").animate({
+			        left: khoangcach+'px'
+			    });
+    		 }, 500);
+		}
+
+		function Start2() {
+			$("#nguadua2").attr("src","nguadua_khongnen.gif");
+    		interval2 = setInterval(function(){ 
+
+    			var x = Math.floor((Math.random() * 50) + 1);
+				var left = $("#nguadua2").css("left");
+				var khoangcach = parseInt(left) + x;
+				if(khoangcach>=manhinh-100)
+				 {
+				 	Stop(interval2);
+				 	alert("Ngựa 2 Đến");
+				 	$("#nguadua2").attr("src","nguadua_khongnen.png");
+				 }
+				 $("#nguadua2").animate({
+			        left: khoangcach+'px'
+			    });
+    		 }, 500);
+		}
+
+    	$("#batdau").click(function(){
+			$(this).css("display","none");
+			$("#choilai").css("display","block");
+			Start1();
+			Start2();
+		});
+		$("#choilai").click(function(){
+			location.reload();
+		});
+		
+	});
+</script>
+</body></html>

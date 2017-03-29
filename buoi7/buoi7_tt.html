@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jquery </title>
+	<link rel="stylesheet" href="">
+	<script src="js/jquery-3.2.0.min.js"></script>
+</head>
+<body>
+<h1>12345678</h1>
+	<h1><div class="doanvan">
+		<div>Chào các bạn</div>
+
+	</div></h1>
+<h1>12345678</h1>
+
+
+Số a: <input id="so_a" placeholder="Nhập số thứ nhất">
+<br></br>
+Số b: <input id="so_b" placeholder="Nhập số thứ 2">
+<br></br>
+Tổng <input id="tong" readonly="true">
+	<button>Click Me!</button>
+
+	<script>
+		$(document).ready(function(){
+			$('button').click(function(){
+				//$('.doanvan').text();
+				//var noidung = $('.doanvan').html('<b style="color:red">Khoa Phạm Training</b>');
+
+				var soa = $('#so_a').val();
+				var sob = $('#so_b').val();
+				$('#tong').val(parseInt(soa)+parseInt(sob))
+
+			})
+				
+
+			
+		})
+	</script>
+</body>
+</html>
