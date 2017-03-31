@@ -5,15 +5,53 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Jquery</title>
 	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	  $( function() {
+	    $( "#datepicker" ).datepicker();
+	  } );
+	  </script>
 	<style>
 		body{
-			margin: 0px;
+			margin: 50px;
 			padding: 0px
+		}
+		#ui-datepicker-div{
+			position: relative!important:;
+    		top: 0px!important;
 		}
 	</style>
 <body>
+<div id=""></div>
+<button class="tru">-</button>
+<input class="so" style="width: 20px" value="1">
+<button class="cong">+</button>
+<p>Date: <input type="text" id="datepicker"></p>
+<p class="a">ccccccccssd</p>
+<form id="myform">
+	<input required type="email" name="email">
+	<button type="submit">Gửi</button>
+</form>
 <script>
+
+	$(document).ready(function(){
+		$('.cong').click(function(){
+			var so = $('.so').val();
+			$('.so').val(parseInt(so)+1);
+
+		})
+		$('.tru').click(function(){
+			var so = $('.so').val();
+			if(parseInt(so) > 1){
+				$('.so').val(parseInt(so)-1);
+			}
+		})
+		
+	})
+</script>
+<!-- <script>
 	$(document).ready(function(){
 		var SCREEN_WIDTH = window.innerWidth,
 	    SCREEN_HEIGHT = window.innerHeight,
@@ -271,6 +309,6 @@
 	};
 
 	})
-</script>
+</script> -->
 </body>
 </html>

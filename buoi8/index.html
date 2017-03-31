@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<style>
+	.test{
+		color: blue
+	}
+</style>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jquery - tiếp theo</title>
+	<link rel="stylesheet" href="">
+	<script src="js/jquery-3.2.0.js"></script>
+</head>
+<body>
+<div class="doanvan"><p>Chào các bạn</p></div>
+Nhập số a: <input class="so_a" placeholder="Nhập số a">
+<br><br>
+Nhập số b: <input class="so_b" placeholder="Nhập số b">
+<br><br>
+Nhập phép tính: <input class="pheptinh" placeholder="+ - * /">
+<br><br>
+<div class="ketqua"></div>
+<br><br>
+<button class="clickme">Click Me!</button>
+<br><br>
+<button id="tru">-</button>
+<input type="text" value="1" style="width: 20px" class="soluong">
+<button id="cong">+</button>
+<br><br>
+
+<a id="laygiatri" href="http://khoapham.vn/" style="">Khoa Phạm</a>
+<br><br><br><br>
+<div id="content" abc="123" class="test">KPT</div>
+
+<button id="clickme">Click Me!</button>
+<br><br><br><br>
+<br><br><br><br>
+<script>
+
+	$(document).ready(function(){
+		$('.clickme').click(function(){
+			var soa = $('.so_a').val();
+			var sob = $('.so_b').val();
+			var pheptinh = $('.pheptinh').val();
+			var ketqua = 0;
+			if(pheptinh == ''){
+				$('.ketqua').html('<p style="color:red">Vui lòng nhập phép tính</p>');
+				$('.pheptinh').focus();
+				return false;
+			}
+			if(pheptinh == '+'){
+				ketqua = parseInt(soa)+parseInt(sob)
+			}
+			if(pheptinh == '-'){
+				ketqua = parseInt(soa)-parseInt(sob)
+			}
+			if(pheptinh == '*'){
+				ketqua = parseInt(soa)*parseInt(sob)
+			}
+			if(pheptinh == '/' && parseInt(sob) != 0){
+				ketqua = parseInt(soa)/parseInt(sob)
+			}
+			$('.ketqua').html(ketqua);
+		})
+
+		$('#cong').click(function(){
+			var so = $('.soluong').val(); //lấy giá trị
+			$('.soluong').val(parseInt(so) + 1)// gán giá trị
+		})
+		$('#tru').click(function(){
+			var so = $('.soluong').val(); //lấy giá trị
+			if(parseInt(so) > 1){
+				$('.soluong').val(parseInt(so) - 1)// gán giá trị
+			}
+		})
+		
+
+		$('#clickme').click(function(){
+			//var laygiatri = $('#laygiatri').attr('href'); //lấy giá trị
+			//alert(laygiatri)
+			//var gangiatri = $('#laygiatri').attr('href','http://online.khoapham.vn/'); //gán giá trị
+
+
+			//$('#content').attr('style','color:blue;font-size:30px')
+			//$('#content').css({"color":"blue",'font-size':'40px'})
+			$('#content').removeClass('test')
+		});
+
+	})
+</script>
+</body>
+</html>
